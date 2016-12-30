@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: BalanceProject
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: yangsaixing
+Implementation-Vendor-Id: BalanceProject
+Build-Jdk: 1.8.0_25
+Implementation-URL: http://projects.spring.io/spring-boot/BalanceProje
+ ct/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
