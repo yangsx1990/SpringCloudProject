@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @RestController
 public class ConsumerController {
-	@Autowired
+	/*@Autowired
 	RestTemplate restTemplate;
 	@Autowired
 	private ComputeService computeService;
@@ -23,12 +23,12 @@ public class ConsumerController {
 		return restTemplate.getForEntity(
 				"http://compute-service/add?a=10&b=20", String.class).getBody();
 	}
-	/**
+	*//**
 	 * 调用熔断器配置的Service
 	 * @return
-	 */
+	 *//*
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String addUpdate() {
 		return computeService.addService();
-	}
+	}*/
 }

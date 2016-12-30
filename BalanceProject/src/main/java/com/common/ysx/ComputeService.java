@@ -14,10 +14,10 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class ComputeService {
 
-	@Autowired
-	RestTemplate restTemplate;
+	/*@Autowired
+	RestTemplate restTemplate;*/
 
-	@HystrixCommand(fallbackMethod = "addServiceFallback")
+	/*@HystrixCommand(fallbackMethod = "addServiceFallback")
 	public String addService() {
 		return restTemplate.getForEntity(
 				"http://COMPUTE-SERVICE/add?a=10&b=20", String.class).getBody();
@@ -25,5 +25,5 @@ public class ComputeService {
 
 	public String addServiceFallback() {
 		return "error";
-	}
+	}*/
 }
