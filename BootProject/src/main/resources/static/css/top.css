@@ -1,0 +1,68 @@
+body{
+	min-width: 1016px;
+}
+.content{
+	border-bottom:1px solid #d7d7d7;
+}
+
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+
+.logo{}
+.logo img{
+	float:left;
+	width:100px;
+	height:100px;
+}
+.logo .logo-text{
+	float:left;
+}
+.logo .logo-text h2{
+	float:left;
+	line-height:100px;
+}
+.logo .logo-text p{
+	float:left;
+	line-height:100px;
+}
+
+.right{}
+.right li{
+	float:left;
+	width:300px;
+	height:60px;
+}
+.right .user-info{
+}
+.right .time{
+	width: 144px;
+	font-size: 12px;
+}
+.right .time p{
+	text-align: right;
+	color: #999;
+}
+.right .time .date{
+	line-height:30px;
+}
+
+.right .user-info p,.right .user-info b,.right .user-info a{
+	float: right;
+	font-size: 12px;
+	line-height: 76px;
+	color: #999999;
+}
+.right .user-info .line{
+	height: 20px;
+	width: 1px;
+	margin: 28px 20px 0 10px;
+	background-color: #aaaaac;
+}
+.user-info a:hover{
+	text-decoration: underline;
+}

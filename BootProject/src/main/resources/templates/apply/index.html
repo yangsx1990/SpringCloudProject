@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>分配单</title>
+<link href="../css/reset.css" rel="stylesheet" />
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/scence-data-verify-result.css" rel="stylesheet" />
+<script src="../js/jquery-2.1.4.js"></script>
+<!-- <script src="../js/apply/index.js"></script> -->
+<script src="../js/page.js"></script>
+
+
+
+<style>
+.body {
+	min-height: 710px;
+}
+
+.views-mange .id {
+	width: 5%;
+	min-width: 40px;
+}
+
+.views-mange .name {
+	width: 13%;
+}
+
+.views-mange .time {
+	width: 15%;
+	min-width: 165px;
+}
+
+.views-mange .seter {
+	width: 10%;
+	min-width: 94px;
+}
+
+.views-mange .state {
+	min-width: 80px;
+}
+
+.views-mange .code {
+	width: 14%;
+	min-width: 170px;
+}
+
+.views-mange .sort {
+	width: 5%;
+	min-width: 40px;
+}
+
+.views-mange .reason {
+	
+}
+
+.views-mange .control {
+	
+}
+
+.views-mange tbody button {
+	margin: 0 10px 0 0;
+	cursor: pointer;
+	color: #2397ce;
+}
+
+.options-wrap {
+	float: left;
+	margin-right: 20px;
+}
+
+.check-state {
+	margin-left: 0;;
+}
+
+.options-pub .options-wrap .text-con {
+	line-height: 28px;
+}
+
+.submit-btn {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #2397ce;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="body">
+			<div class="title">
+				<p>分配列表</p>
+			</div>
+			<form class="form-q" action="index" method="post">
+				<div class="options clear">
+					<div class="check-state options-pub">
+						<h3 class="title-name">问题类别：</h3>
+
+						<select class="info-q1" name="info-q1">
+						</select> 
+						<select class="info-q2" name="info-q2">
+							<option value="">请选择</option>
+						</select>
+
+					</div>
+					<div class="view-name">
+						<h3>申请者：</h3>
+						<input type="text" value="" />
+					</div>
+					<div class="check-state options-pub">
+						<h3 class="title-name">状态：</h3>
+<input type="hidden" id="hdstate" th:value="${maintenance.state}" />
+						<select id="state" name="state">
+							<option value="">请选择</option>
+							<option value="0">未处理</option>
+							<option value="1">已分配</option>
+							<option value="2">处理中</option>
+							<option value="3">审核中</option>
+							<option value="4">已完成</option>
+						</select>
+
+					</div>
+					<div class="check-state options-pub">
+						<button class="search" type="submit">搜索</button>
+					</div>
+				</div>
+
+				<div class="pub-common">
+					<div class="about-views clear">
+						<a href="/apply/add" class="pub-btn btn1">新增</a>
+					</div>
+					<table class="views-mange">
+						<thead>
+							<tr>
+								<th class="name">编号</th>
+								<th class="seter">申请者</th>
+								<th class="time">创建时间</th>
+								<th class="state">问题描述</th>
+								<th class="code">转接人</th>
+								<th class="reason">状态</th>
+								<th class="control">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="entity : ${page}">
+								<td class="name" th:text="${entity.maintenanceId}"></td>
+								<td class="seter" th:text="${entity.employeeName}"></td>
+								<td class="time" th:text="${entity.createTime==null?'':#dates.format(entity.createTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+								<td th:text="${entity.issue}"></td>
+								<td class="state active" th:text="${entity.employeeName}"></td>
+								<td class="reason" th:switch="${entity.state}">								
+								<span th:case="0">未处理</span>
+								<span th:case="1">已分配</span>
+								<span th:case="2">处理中</span>
+								<span th:case="3">审核中</span>
+								<span th:case="4">已完成</span>
+								
+								</td>
+								<td class="control" th:switch="${entity.state}">
+									<span th:case="0">
+									<button class="relocate" data-reason="yes">重新分配</button>
+									<button class="update" data-reason="yes">修改</button>									
+									</span>
+									<span th:case="3">
+									<button data-reason="yes">审核</button>									
+									</span>
+									<span th:case="4">
+									<button data-reason="yes">删除</button>
+									</span>
+								</td>
+							</tr>							
+						</tbody>
+					</table>
+				</div>
+
+				<div class="to" style="margin-bottom: 100px; border: none;">
+					<div style="float: none; margin: 0 20px 20px 0;"
+						class="to-page clear">
+						<button class="prev-page" type="button" style="margin-left: 0;">上一页</button>
+						<span th:text="${page.pageNum}" class="cur-page"></span>/<span
+							th:text="${page.pages}" class="total-page"></span>
+						<button type="button" class="next-page">下一页</button>
+						<a class="goto" href="#">跳转</a>
+					</div>
+					<div class="to-detail">
+						<span>跳转到第</span> <input id="pageNum" type="text" name="pageNum"
+							th:value="${page.pageNum}" /> <span style="margin-right: 5px;">页</span>
+						<button class="ok" type="submit">确定</button>
+					</div>
+				</div>
+				
+			</form>
+			
+		</div>
+	</div>	
+	<script>
+	//重新分配
+	$('.relocate').click(function(){
+		window.location.href="/apply/relocate?maintenanceId=E201701111033440002";
+		return false;
+	});
+	
+	$('.update').click(function(){
+		window.location.href="/apply/editUI?maintenanceId=E201701111033440002";
+		return false;
+	});
+	</script>
+</body>
+</html>

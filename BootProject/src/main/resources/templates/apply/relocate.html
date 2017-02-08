@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+		<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../css/public.css" rel="stylesheet" type="text/css" />
+		<link href="../css/edit-scence.css" rel="stylesheet" type="text/css" />
+		<script src="../js/jquery-2.1.4.js"></script>
+		<style>
+			button{
+				cursor: pointer;
+			}
+			
+			.jp-jplayer{
+				background: none;
+			}
+			.view input{
+				border: 1px solid rgba(0,0,0,.1);
+			}
+			.pub form{
+				width: auto;
+			}
+			.form-info>select,.form-q>select,.form-r>select,.form-p>select{
+				float: left;
+				margin-top: 5px;
+				margin-right: 10px;
+			}
+			.good-time{
+				height: 220px;
+			}
+			.good-time textarea{
+				width: 300px;
+				height: 200px;
+				border: 1px solid #999 ;
+			}
+			.add-scence .content .button{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="img" src="" alt="" style="display: none;" />
+		<div class="wrap add-scence">
+			<div class="body">
+				<div class="title">
+					<p>分配事件</p>
+				</div>
+				<div class="content view">
+					
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>事件编号：</span>
+						</div>
+						<div class="mar-l">
+							<input id="maintenanceId" type="text" th:value="${maintenance.maintenanceId}" disabled="disabled"/>
+						</div>
+					</div>
+					
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>问题类别：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.typeName}" disabled="disabled" />
+						</div>
+					</div>
+					
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>问题描述：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.issue}" disabled="disabled" />
+						</div>
+					</div>
+					
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>上次处理人：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.dealName}" disabled="disabled" />
+						</div>
+					</div>
+					
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>处理人：</span>
+						</div>
+						<div class="mar-l">
+							<form class="form-p">
+								<select id="deal_person" name="info-p">
+									<option value="1">admin</option>
+									<option value="2">井超</option>
+									<option value="3">王超凡</option>
+									<option value="4">杨四方</option>
+								</select>
+							</form>
+						</div>
+					</div>
+					
+				<div class="button">
+					<button id="commit" class="submit">完成/保存</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+	<script src="../js/apply/index.js"></script>
+
+</html>

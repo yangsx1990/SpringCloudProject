@@ -1,0 +1,63 @@
+
+.article{
+	line-height: 40px;
+	text-indent: 2em;
+	font-size: 14px;
+	color: #666;
+}
+.btn{
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	background-color: #2397ce;
+	border-radius: 3px;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -75px;
+	cursor: pointer;
+}
+
+table{
+	width: 100%;
+	position: absolute;
+	top: 250px;
+}
+th,td{
+	border-color: #f1f1f1;
+	
+	font-weight: normal;
+	font-size: 14px;
+	text-align: center;
+	height: 40px;
+	color: #666;
+}
+th{
+	color: #222;
+}
+.id{
+	width: 79px;
+}
+.time{
+	width: 199px;
+}
+.seter{
+	width: 119px;
+}
+.state{
+	width: 119px;
+}
+.err{
+	width: 119px;
+}
+.set{
+	width: 119px;
+}
+.a{
+	color: #2397ce;
+}
+.red{
+	color: #f14545;
+}

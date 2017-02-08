@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>导航</title>
+	<link href="../css/reset.css" rel="stylesheet" />
+	<link href="../css/public.css" rel="stylesheet" />
+	<link href="../css/left.css" rel="stylesheet" />
+	<script src="../js/jquery-2.1.4.js"></script>
+</head>
+
+<body style="background:#007ab3;">
+<div class="wrap">
+	<ul>
+		<li>
+			<h2 style="font-size:20px; font-weight:bold; color:#fff; margin: 30px;">HelpDesk 管理系统</h2>
+			<h2 id="scence-list" data-btn = "false" style=" padding-left: 20px; font-size: 16px; color: #fff; line-height: 50px; "><span>-</span>Help Desk</h2>
+		    <ul class="list">
+		        <li class="scence-list">
+		            <h2 data-btn = "false" data-num = "0"><a href="apply/index" target="showFrame"><span>-</span>分配列表</a></h2>
+		            <!-- <ul class="info-list" style="display:block">
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="padding-left: 86px;"><a href="scence-data-verify-result.html" target="showFrame" style="color: #fff;"><span>+</span>景区资料</a></h3>
+		                    <ul class="pub">
+		                        <li><a style="color: #fff;" href="scence-data-verify-result.html" target="showFrame">景区资料</a></li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="views-mange.html" target="showFrame">景点管理</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="wait-complete-views-list.html" target="showFrame">待完善景点列表</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none;"><span>+</span>讲解管理</h3>
+		                    <ul class="pub">
+		                        <li><a href="check-mange.html" target="showFrame">审核讲解</a></li>
+		                        <li class="none"><a href="upload-speak.html" target="showFrame">上传讲解</a></li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="collect-user-mange.html" target="showFrame">采集器用户管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 66px;"><a href="code-mange.html" target="showFrame">二维码管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="feedback.html" target="showFrame">意见反馈</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		            </ul> -->
+		        </li>
+		        <li class="scence-list">
+		            <h2 data-btn = "true" data-num = "0"><a href="apply" target="showFrame"><span>-</span>待处理列表</a></h2>
+		            <!-- <ul class="info-list">
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="padding-left: 86px;"><a href="scence-data-verify-result.html" target="showFrame" style="color: #fff;"><span>+</span>景区资料</a></h3>
+		                    <ul class="pub">
+		                        <li><a style="color: #fff;" href="scence-data-verify-result.html" target="showFrame">景区资料</a></li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="views-mange.html" target="showFrame">景点管理</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="wait-complete-views-list.html" target="showFrame">待完善景点列表</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none;"><span>+</span>讲解管理</h3>
+		                    <ul class="pub">
+		                        <li><a href="check-mange.html" target="showFrame">审核讲解</a></li>
+		                        <li class="none"><a href="upload-speak.html" target="showFrame">上传讲解</a></li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="collect-user-mange.html" target="showFrame">采集器用户管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 66px;"><a href="code-mange.html" target="showFrame">二维码管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="feedback.html" target="showFrame">意见反馈</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		            </ul> -->
+		        </li>
+		        <li class="scence-list">
+		            <h2 data-btn = "true" data-num = "0"><a href="complete-scence-data.html" target="showFrame"><span>-</span>完成列表</a></h2>
+		            <!-- <ul class="info-list">
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="padding-left: 86px;"><a href="scence-data-verify-result.html" target="showFrame" style="color: #fff;"><span>+</span>景区资料</a></h3>
+		                    <ul class="pub">
+		                        <li><a style="color: #fff;" href="scence-data-verify-result.html" target="showFrame">景区资料</a></li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="views-mange.html" target="showFrame">景点管理</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><span>+</span><a href="wait-complete-views-list.html" target="showFrame">待完善景点列表</a></h3>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none;"><span>+</span>讲解管理</h3>
+		                    <ul class="pub">
+		                        <li><a href="check-mange.html" target="showFrame">审核讲解</a></li>
+		                        <li class="none"><a href="upload-speak.html" target="showFrame">上传讲解</a></li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="collect-user-mange.html" target="showFrame">采集器用户管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 66px;"><a href="code-mange.html" target="showFrame">二维码管理</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		                <li class="scence-info">
+		                    <h3 data-btn = "true" style="border: none; padding-left: 86px;"><a href="feedback.html" target="showFrame">意见反馈</a></h3>
+		                    <ul class="pub">
+		                        <li>景区资料</li>
+		                        <li>景点管理</li>
+		                        <li class="none">讲解管理</li>
+		                    </ul>
+		                </li>
+		            </ul> -->
+		        </li>
+		    </ul>
+	        <li class="QC-mange" style="border-bottom: 1px solid #5fb0d6; border-top: 0px solid #5fb0d6;">
+	        	 <h2><a href="code-mange.html" target="showFrame">系统管理</a></h2>
+	        </li>
+		</li>
+	</ul>
+</div>
+<!--<div class="QC-mange">
+    <h2><a href="code-mange.html" target="showFrame">二维码管理</a></h2>
+</div>-->
+<script>
+
+//点击景点列表收缩和展开
+$('#scence-list').click(function(){
+	//$('.info-list').slideUp();
+	//$(this).next('ul').slideDown();
+	$(this).next('ul').slideToggle();
+	
+	if($(this).attr('data-btn')=='true'){
+		$(this).attr('data-btn','false');
+		$('.QC-mange').css('border-top-width','0');
+		$(this).find('span').html('-');
+	}else if($(this).attr('data-btn')=='false'){
+		$(this).attr('data-btn','true');
+		$('.QC-mange').css('border-top-width','1px');
+		$(this).find('span').html('+');
+	}
+});
+
+$('.scence-list h2').click(function(){
+	//$('.info-list').slideUp();
+	//$(this).next('ul').slideDown();
+	$(this).next('ul').slideToggle();
+	
+	if($(this).attr('data-btn')=='true'){
+		$(this).find('span').html('-');
+		$(this).attr('data-btn','false');
+		$(this).css('border-width','0');
+	}else if($(this).attr('data-btn')=='false'){
+		$(this).find('span').html('-');
+		$(this).attr('data-btn','true');
+		$(this).css('border-width','1px');
+	}
+});
+
+//点击景区信息等
+$('.scence-info h3').click(function(){
+	$(this).next('ul').slideToggle();
+	
+	if($(this).attr('data-btn')=='true'){
+		$(this).find('span').html('-');
+		$(this).attr('data-btn','false');
+		$(this).css('border-width','0');
+	}else if($(this).attr('data-btn')=='false'){
+		$(this).find('span').html('-');
+		$(this).attr('data-btn','true');
+		$(this).css('border-width','1px');
+	}
+});
+
+//点击每个li的时候颜色的变化
+$('.list li').each(function(index,el){
+	var rgb=$(el).css('background-color');
+	$(el).attr('data-color',rgb);
+	
+	$(el).on('click',function(ev){
+		$('.list li').each(function(ind,ele){
+			$(ele).css('background-color',$(ele).attr('data-color'));
+		});
+		
+		$(this).css('background-color','rgba(0,87,127,1)');
+		ev.stopPropagation();
+	});
+});
+
+
+</script>
+</body>
+</html>

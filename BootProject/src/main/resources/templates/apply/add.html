@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/public.css" rel="stylesheet" type="text/css" />
+<link href="../css/edit-scence.css" rel="stylesheet" type="text/css" />
+<link href="../css/jplayer.blue.monday.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/token-input.css" rel="stylesheet" type="text/css" />
+<link href="../css/token-input-facebook.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/jquery.tokeninput.js"></script>
+<script src="../js/apply/applyAdd.js"></script>
+<script type="text/javascript" src="../js/jplayer/jquery.jplayer.min.js"></script>
+<style>
+button {
+	cursor: pointer;
+}
+
+.jp-jplayer {
+	background: none;
+}
+
+.view input {
+	border: 1px solid #999;
+}
+
+.pub form {
+	width: auto;
+}
+
+.form-info>select, .form-q>select, .form-r>select, .form-p>select {
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.good-time {
+	height: 220px;
+}
+
+.good-time textarea {
+	width: 300px;
+	height: 200px;
+	border: 1px solid #999;
+}
+
+.add-scence .content .button {
+	text-align: center;
+}
+
+.mar-l {
+	position: relative;
+}
+
+.gate-list {
+	position: absolute;
+	left: 0;
+	width: 234px;
+	background: #fff;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	z-index: 1;
+	display: none;
+}
+
+.gate-list>li {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid #999;
+}
+</style>
+</head>
+<body>
+	<img id="img" src="" alt="" style="display: none;" />
+	<div class="wrap add-scence">
+		<div class="body">
+			<div class="title">
+				<p>添加事件</p>
+			</div>
+			<div class="content view">
+				<form id="addForm">
+					<input type="hidden" id="maintenanceId" name="maintenanceId" th:value="${maintenance.maintenanceId}" />
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>事件申请者：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.employeeName}" id="employeeName" name="employeeName" />
+						</div>
+					</div>
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>申请者座机：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.tel}" id="tel" name="tel" />
+						</div>
+					</div>
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>申请者手机：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.mobile}" id="mobile" name="mobile" />
+						</div>
+					</div>
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>申请者邮箱：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" th:value="${maintenance.email}" id="email" name="email" />
+						</div>
+					</div>
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>发起人所属部门：</span>
+						</div>
+						<div class="mar-l">
+							<input type="text" id="searchuser"  name="searchuser"/>
+							<input type="hidden" id="username" name="realName" />
+							<input type="hidden" id="userid" name="userid" />							
+						</div>
+					</div>
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>问题类别：</span>
+						</div>
+						<div class="mar-l">
+						<select class="info-q1" name="typeName">
+						</select> 
+						<select class="info-q2" name="categoryName">
+							<option value="">请选择</option>
+						</select>							
+						</div>
+					</div>
+
+
+					<div class="good-time pub">
+						<div class="head-title">
+							<i>*</i><span>问题描述：</span>
+						</div>
+						<textarea class="mar-l" id="issue" name="issue" th:value="${maintenance.issue}">问题描述</textarea>
+					</div>
+
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>紧急度：</span>
+						</div>
+						<div class="mar-l">
+							<select id="emergency" name="emergency">
+								<option value="0">至急</option>
+								<option value="1">高</option>
+								<option value="2">中</option>
+								<option value="3">低</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="phone pub">
+						<div class="head-title">
+							<i>*</i><span>处理人：</span>
+						</div>
+						<div class="mar-l">
+							<select id="dealEmployeeId" name="dealName">
+								<option value="井超">井超</option>
+								<option value="李杉">李杉</option>
+								<option value="刘晓龙">刘晓龙</option>
+								<option value="芦彬">芦彬</option>
+								<option value="随延浩">随延浩</option>
+								<option value="王超凡">王超凡</option>
+								<option value="薛重翔">薛重翔</option>
+							</select>
+						</div>
+					</div>
+				</form>
+
+				<div class="button">
+					<button id="submitBtn" class="submit">完成/保存</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+<!--	
+	(function() {
+		var oS1 = document.querySelector('.info-q1');
+		var oS2 = document.querySelector('.info-q2');
+		//var data;
+		$.get("/dict/getDictSelectItem/9", function(data) {
+			var str1 = '';
+			for (var i = 0; i < data.length; i++) {
+				str1 += '<option data-id=' + data[i].dictId + ' value="'
+						+ data[i].dictValue + '">' + data[i].dictName
+						+ '</option>';
+			}
+
+			oS1.innerHTML = str1;
+
+			oS1.addEventListener('change', function() {
+
+				var str2 = '';
+				var index = this.selectedIndex;
+				var value = this.options[index].value;
+				var text = this.options[index].text;
+				var ID = this.options[index].getAttribute('data-id');
+
+				for (var i = 0; i < data.length; i++) {
+					if (ID == data[i].dictId) {
+						for (var j = 0; j < data[i].child.length; j++) {
+							str2 += '<option value="'
+									+ data[i].child[j].dictValue + '">'
+									+ data[i].child[j].dictName + '</option>';
+						}
+
+					}
+				}
+
+				// for(var name1 in data[value][1]){
+				// str2+='<option
+				// value="'+name1+'">'+data[value][1][name1]+'</option>';
+				// }
+
+				oS2.innerHTML = str2;
+
+			}, false);
+		}, "json");
+	})();
+	-->
+</script>
+</html>

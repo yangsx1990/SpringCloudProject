@@ -1,0 +1,88 @@
+.code-mange{}
+.code-mange .show-code{
+	height: 110px;
+}
+.code-mange li{
+	width: 250px;
+	height: auto;
+	margin-right: 95px;
+	border-radius: 6px;
+	overflow: hidden;
+	border: none;
+}
+.code-mange li:last-of-type{
+	width: 250px;
+	height: auto;
+	margin-right: 0px;
+	border-radius: 6px;
+	overflow: hidden;
+	border: none;
+}
+.code-mange .pub-l{
+	position: relative;
+	width: 110px;
+	background: none;
+}
+.code-mange .pub-l img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 110px;
+	height: 110px;
+	margin: 0;
+}
+.code-mange .pub-r{
+	width: 140px;
+	background: #f2fcfe;
+}
+.code-mange .pub-r h2{
+	font-size: 22px;
+	color: #222;
+	margin-top: 28px;
+	text-align: center;
+}
+.code-mange .pub-r p{
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+}
+.code-mange .download-code{
+	width: 250px;
+	height: 30px;
+	margin: 10px 0;
+	text-align: center;
+}
+.code-mange .message button{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	color: #2397ce;
+	border: 1px solid #2397ce;
+	border-radius: 3px;
+}
+.code-mange .message button.sec{
+	margin-left: 5px;
+}
+.code-mange .message .process-bar{
+}
+.code-mange .message .process-bar>*{
+	float: left;
+}
+.code-mange .message .process-bar p{
+	width: 204px;
+	height: 6px;
+	background: #f1f1f1;
+	overflow: hidden;
+	border-radius: 3px;
+	
+}
+.code-mange .message .process-bar i{
+	float: left;
+	width: 10px;
+	background: #83da35;
+	height: 6px;
+}
+.code-mange .message .process-bar span{
+	margin-left: 5px;
+	margin-top: -6px;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hiersun.service.mapper.MaintenanceMapper">
+  <resultMap id="BaseResultMap" type="com.hiersun.entity.Maintenance">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="maintenance_id" jdbcType="VARCHAR" property="maintenanceId" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="type_id" jdbcType="INTEGER" property="typeId" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="emergency" jdbcType="TINYINT" property="emergency" />
+    <result column="issue" jdbcType="VARCHAR" property="issue" />
+    <result column="area" jdbcType="INTEGER" property="area" />
+    <result column="deparment_id" jdbcType="INTEGER" property="deparmentId" />
+    <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
+    <result column="employee_id" jdbcType="INTEGER" property="employeeId" />
+    <result column="employee_name" jdbcType="VARCHAR" property="employeeName" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="dealtime" jdbcType="INTEGER" property="dealtime" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="creater_id" jdbcType="INTEGER" property="createrId" />
+    <result column="creater_name" jdbcType="VARCHAR" property="createrName" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="deal_id" jdbcType="INTEGER" property="dealId" />
+    <result column="deal_name" jdbcType="VARCHAR" property="dealName" />
+    <result column="allocate_time" jdbcType="TIMESTAMP" property="allocateTime" />
+    <result column="flag" jdbcType="TINYINT" property="flag" />
+  </resultMap>
+  
+  <update id="updateDealById" parameterType="com.hiersun.entity.Maintenance">
+		update 
+			maintenance
+	    set 
+	    <!-- <if test=""> -->
+	    deal_id=#{dealId,jdbcType=INTEGER},deal_name=#{dealName,jdbcType=VARCHAR} 
+		where maintenance_id=#{maintenanceId,jdbcType=VARCHAR}
+	</update>
+</mapper>

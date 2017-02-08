@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hiersun.service.mapper.DepartmentMapper">
+  <resultMap id="BaseResultMap" type="com.hiersun.entity.Department">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="department_id" jdbcType="INTEGER" property="departmentId" />
+    <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
+    <result column="parent_department_id" jdbcType="INTEGER" property="parentDepartmentId" />
+    <result column="manager_id" jdbcType="INTEGER" property="managerId" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="postcode" jdbcType="VARCHAR" property="postcode" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="flag" jdbcType="TINYINT" property="flag" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+  </resultMap>
+  
+  <select id="selectByName" resultMap="BaseResultMap">
+		SELECT
+		*
+		FROM department
+		WHERE department_name like CONCAT(CONCAT('%',#{name}),'%')
+	</select>
+</mapper>

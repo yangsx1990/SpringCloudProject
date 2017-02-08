@@ -1,0 +1,252 @@
+
+.article{
+	line-height: 24px;
+	text-indent: 2em;
+	font-size: 14px;
+	color: #999;
+	margin: 10px;
+}
+
+.pub-common{
+	position: relative;
+	padding: 0 10px;
+}
+.pub-common .about-views{}
+.pub-common .about-views a{
+	float: left;
+	margin: 10px;
+}
+.pub-common .about-views a:first-of-type{
+	margin-left: 0;
+}
+
+.pub-btn{
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background-color: #2397ce;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+
+table{
+}
+th,td{
+	border-color: #f1f1f1;
+	
+	/*font-weight: normal;*/
+	font-size: 14px;
+	text-align: center;
+	height: 40px;
+	color: #222;
+}
+th{
+	color: #222;
+}
+.id{
+	width: 79px;
+}
+.time{
+	width: 199px;
+}
+.seter{
+	width: 119px;
+}
+.state{
+	width: 119px;
+}
+.err{
+	width: 119px;
+}
+.a{
+	color: #2397ce;
+}
+.red{
+	color: #f14545;
+}
+
+/***************添加景点******************/
+.add-views{
+	position: relative;
+}
+
+.options{
+	margin-left: 10px;
+}
+.options>*{
+	float: left;
+}
+.options h3,.options h3+*{
+	float: left;
+	line-height: 30px;
+}
+.options .view-name{
+	height: 30px;
+}
+.options .view-name h3{}
+.options .view-name input{
+	height: 28px;
+	width: 178px;
+	border: 1px solid #f1f1f1;
+}
+
+.options-pub{
+}
+.options-pub .title-name{
+	font-size: 14px;
+	color: #222;
+}
+.options-pub .options-wrap{
+	position: relative;
+}
+.options-pub .options-wrap .text-con{
+	float: left;
+	height: 28px;
+	width: 84px;
+	color: #999;
+	border: 1px solid #f1f1f1;
+	text-indent: 1em;
+}
+.options-pub .options-wrap .btn{
+	float: left;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #5cb5df;
+	background: #2397ce url(../imgs/arrow-bg.png) no-repeat 0 10px;
+}
+.options-pub .options-wrap .options-content{
+	position: absolute;
+	left: 0;
+	top: 29px;
+	width: 114px;
+	height: 0;
+	background: #2397ce;
+	overflow: hidden;
+	border: 1px solid #f1f1f1;
+	border-bottom: none;
+	z-index: 2;
+	/*box-shadow: 0px 0px 5px rgba(0,0,0,1);*/
+}
+.options-pub .options-wrap .options-content li{
+	border-bottom: 1px solid #f1f1f1;
+	color: #fff;
+	cursor: pointer;
+}
+
+.check-state{
+	margin-left: 60px;
+}
+.options-pub .search{
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	background-color: #2397ce;
+	cursor: pointer;
+}
+
+.views-mange .name{
+	min-width: 94px;
+}
+.views-mange .time{
+	width: 155px;
+}
+.views-mange .seter{
+	width: 66px;
+}
+.views-mange .state{
+	width: 80px;
+}
+.views-mange .code{
+	width: 150px;
+}
+.views-mange .sort{
+	width: 42px;
+}
+.views-mange .reason{
+	min-width: 100px;
+}
+.views-mange .control{
+	min-width: 255px;
+}
+.views-mange tbody button{
+	margin: 0 10px 0 0;
+	cursor: pointer;
+	color: #2397ce;
+}
+.active{
+	color: #0c9e35;
+}
+.views-mange button[disabled]{
+	color: #999;
+}
+
+.opacity{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+}
+.opacity .text-con{
+	width: 580px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -200px;
+	padding: 0 10px;
+	background: #fff;
+	border-radius: 3px;
+	
+}
+.opacity .text-con h2{
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.opacity .text-con h2+div{
+	height: 270px;
+	margin-top: 10px;
+	border: 1px solid #f1f1f1;
+}
+.opacity .text-con textarea{
+	width: 580px;
+	height: 230px;
+	line-height: 20px;
+	text-align: left;
+	text-indent: 2em;
+}
+.opacity .text-con p{
+	height: 20px;
+	text-align: right;
+	margin: 10px;
+	color: #999;
+}
+.opacity .text-con p span{}
+.opacity .text-con p span{}
+.opacity .text-con .btn{
+	text-align: center;
+}
+.opacity .text-con .btn button{
+	width: 90px;
+	height: 30px;
+	margin: 20px 0;
+	line-height: 30px;
+	text-align: center;
+	color: #2397ce;
+	border: 1px solid #2397ce;
+	border-radius: 3px;
+}
+.opacity .text-con .btn button:last-of-type{
+	margin-left: 60px;
+}
